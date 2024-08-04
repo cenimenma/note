@@ -1,8 +1,14 @@
 # Git 学习笔记
 
-## 常见指令
-
 ![image-20240724144609710](C:\Users\泰来\AppData\Roaming\Typora\typora-user-images\image-20240724144609710.png)
+
+Git 并不像 SVN 那样有个中心服务器。
+
+目前我们使用到的 Git 命令都是在本地执行，如果你想通过 Git 分享你的代码或者与其他开发人员合作。 你就需要将数据放到一台其他开发人员能够连接的服务器上。
+
+在github上，我们建立了远端仓库后，可以把本地仓库的数据推送到远端仓库里，就实现了数据共享。
+
+## 常见指令
 
 ##### git add
 
@@ -50,10 +56,13 @@
 
 - git push [alias] [branch]  将你的 [branch] 分支推送成为 [alias] 远程仓库上的 [branch] 分支
   - git push [-f] [--set-upstream] [远端名称[本地分支名] [:远程分支名] ]
+  - -f 表示强制覆盖
   - 名称相同可以只写本地分支
   - git push origin master
 
 ## 仓库使用流程
+
+#### 初次使用
 
 - git init      初始化
 - git add     添加到暂存
@@ -63,3 +72,14 @@
 
 - git remote add origin git地址    上传
 - git push -u origin master
+
+#### 更新使用
+
+- git add     添加到暂存
+- git commit -m"备注名"   提交
+- git pull origin master
+- git push -u origin master
+
+## 私人git服务器
+
+可以自己搭建一台 Git 服务器作为私有仓库使用
