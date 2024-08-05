@@ -77,7 +77,7 @@ Git 并不像 SVN 那样有个中心服务器。
 
 - git add     添加到暂存
 - git commit -m"备注名"   提交
-- git pull origin master
+- git pull origin master   如果有添加文件
 - git push -u origin master
 
 ## 私人git服务器
