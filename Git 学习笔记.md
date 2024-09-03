@@ -80,6 +80,16 @@ Git 并不像 SVN 那样有个中心服务器。
 - git pull origin master   如果有添加文件
 - git push -u origin master
 
+#### 修改远程仓库地址
+
+- git remote set-url origin <remote-url>
+
+#### 删除本地仓库
+
+- git branch
+- ls -a
+- rm -rf .git
+
 ## 私人git服务器
 
 可以自己搭建一台 Git 服务器作为私有仓库使用
