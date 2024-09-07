@@ -93,6 +93,30 @@ $$
 
 ## 对称密码学
 
+## 序列密码
+
+#### 线性反馈移位寄存器(LFSR)
+
+![image-20240907092759148](C:\Users\泰来\AppData\Roaming\Typora\typora-user-images\image-20240907092759148.png)
+
+- 图中是度为m的通用LFSR
+  - 有m个触发器和m个反馈位置
+  - 反馈路径是否活跃取决于反馈系数$$p_0,p_1,\cdots,p_{m-1}$$
+  - 触发器和反馈位置通过XOR连接
+
+$$
+\begin{aligned}
+s_{m+1}&\equiv s_mp_{m-1}+\cdots+s_2p_1+s_1p_0\quad &mod\ 2\\
+s_{i+m}&\equiv \Sigma^{m-1}_{j=0}p_j\cdot s_{i+j}\quad s_i,p_j\in\{0,1\} \ & mod\ 2
+\end{aligned}
+$$
+
+## 分组密码
+
+### DES(Data Encryption Standard)
+
+
+
 ## 基础知识补录
 
 #### 概率论公式
@@ -207,3 +231,8 @@ $$U_n$$为服从$$\{0,1\}^n$$上的一个均匀分布的随机变量，$$1^n$$�
   $$
 
 ### 伪随机数生成器
+
+从一个给定的初始种子值，计算后生成一个序列。
+
+- 不可预测 	只有密码学要求
+- 
